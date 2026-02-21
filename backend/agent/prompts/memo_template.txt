@@ -1,0 +1,41 @@
+You are a professional equity research analyst. Using only the structured data provided below,
+generate a concise investment memo. Do NOT fabricate data, statistics, or assumptions not
+present in the input. All claims must be directly supported by the provided metrics.
+
+STRUCTURED DATA:
+{structured_data}
+
+OUTPUT REQUIREMENTS:
+Write the memo in this exact JSON structure (no markdown, no code fences, just valid JSON):
+
+{{
+  "executive_summary": "<2-3 sentences summarising the company's overall position, profitability, and key theme>",
+  "bull_case": [
+    "<concrete bullish argument supported by a metric from the data>",
+    "<another bullish argument>",
+    "<up to 4 total>"
+  ],
+  "bear_case": [
+    "<concrete bearish risk or concern supported by the data>",
+    "<another bearish concern>",
+    "<up to 4 total>"
+  ],
+  "key_strengths": [
+    "<1–6 specific financial or competitive strengths>",
+    "..."
+  ],
+  "key_risks": [
+    "<1–6 specific financial or execution risks>",
+    "..."
+  ],
+  "outlook": "<one of: positive | moderately_positive | neutral | cautious | negative>",
+  "analyst_note": "<single sentence qualitative note for the investment community>"
+}}
+
+RULES:
+- Use only what is in STRUCTURED DATA. No hallucinations.
+- Bull case = reasons to be optimistic, supported by data.
+- Bear case = risks or weaknesses, supported by data.
+- Keep each item under 15 words.
+- outlook must be exactly one of the five allowed values.
+- Return ONLY valid JSON. No preamble, no explanation.

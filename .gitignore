@@ -1,0 +1,177 @@
+# ============================================================
+# AI Financial Agent — .gitignore
+# ============================================================
+
+# ----------------------------
+# 🔐 Secrets & Environment
+# ----------------------------
+.env
+.env.*
+!.env.example
+
+# ----------------------------
+# 🐍 Python
+# ----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+build/
+dist/
+eggs/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+pip-wheel-metadata/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# ----------------------------
+# 🗄️ Database
+# ----------------------------
+*.db
+*.sqlite
+*.sqlite3
+financial_agent.db
+
+# ----------------------------
+# 📊 Machine Learning Models
+# ----------------------------
+# Model weights & checkpoints (large binary files)
+*.pth
+*.pkl
+*.joblib
+*.h5
+*.onnx
+*.bin
+backend/forecasting/tft/*.pth
+backend/forecasting/tft/*.pkl
+backend/forecasting/xgboost/*.pkl
+backend/forecasting/features.pkl
+backend/forecasting/stocks_used.pkl
+
+# ----------------------------
+# 📋 Logs
+# ----------------------------
+*.log
+app.log
+logs/
+
+# ----------------------------
+# 📦 Node.js / Frontend
+# ----------------------------
+frontend/node_modules/
+node_modules/
+frontend/.next/
+.next/
+frontend/out/
+out/
+frontend/.cache/
+.cache/
+
+# Build output
+frontend/build/
+build/
+frontend/dist/
+dist/
+
+# Next.js type build info
+frontend/tsconfig.tsbuildinfo
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# npm / yarn / pnpm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.yarn-integrity
+
+# ----------------------------
+# 💾 Data & Cache
+# ----------------------------
+data/cache/
+data/raw/
+data/processed/
+*.csv
+*.parquet
+*.feather
+*.json.gz
+__pycache__/
+
+# ----------------------------
+# 🖥️ OS-Specific
+# ----------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encdata
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+
+# ----------------------------
+# 🛠️ IDEs & Editors
+# ----------------------------
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# JetBrains (PyCharm, WebStorm, etc.)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Vim / Neovim
+*.swp
+*.swo
+[._]*.s[a-z]
+Session.vim
+.netrwhist
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# ----------------------------
+# 🧪 Testing & Coverage
+# ----------------------------
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.cover
+.hypothesis/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# ----------------------------
+# 📦 Misc
+# ----------------------------
+*.bak
+*.tmp
+*.orig
+*.rej
+.gemini/
